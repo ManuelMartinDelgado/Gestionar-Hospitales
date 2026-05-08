@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1584209020 source:d:\practica2\main.cpp
+	<iostream>
+
+1777981450 source:d:\practica2\src\monitorizacionhospitales.cpp
+	"MonitorizacionHospitales.h"
+
+1777981450 d:\practica2\include\monitorizacionhospitales.h
+
+1777983246 source:d:\practica2\src\cola.cpp
+	"Cola.h"
+
+1777983246 d:\practica2\include\cola.h
+
+1777984084 source:d:\practica2\src\lista.cpp
+	<Lista.h>
+
+1778006102 d:\practica2\include\lista.h
+	<iostream>
+
+1777984136 source:d:\practica2\src\hospital.cpp
+	<Hospital.h>
+
+1778005242 d:\practica2\include\hospital.h
+	<Lista.h>
+	<Cola.h>
+
+1778070082 source:g:\practica2\main.cpp
+	<iostream>
+	<Hospital.h>
+	"MonitorizacionHospitales.h"
+
+1778067470 source:g:\practica2\src\cola.cpp
+	"Cola.h"
+
+1778067436 g:\practica2\include\cola.h
+	<iostream>
+	<Lista.h>
+
+1778068740 source:g:\practica2\src\hospital.cpp
+	<Hospital.h>
+	<Cola.h>
+
+1778068518 g:\practica2\include\hospital.h
+	<Lista.h>
+	<Cola.h>
+
+1778068398 g:\practica2\include\lista.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+
+1778066934 source:g:\practica2\src\lista.cpp
+	<Lista.h>
+
+1778070082 source:g:\practica2\src\monitorizacionhospitales.cpp
+	"MonitorizacionHospitales.h"
+
+1778070238 g:\practica2\include\monitorizacionhospitales.h
+	<Cola.h>
+	<Hospital.h>
+

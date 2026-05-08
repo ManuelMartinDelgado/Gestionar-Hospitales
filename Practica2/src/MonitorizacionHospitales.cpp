@@ -2,7 +2,8 @@
 
 MonitorizacionHospitales::MonitorizacionHospitales()
 {
-    //ctor
+
+
 }
 
 MonitorizacionHospitales::~MonitorizacionHospitales()
