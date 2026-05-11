@@ -17,10 +17,10 @@ class Hospital
     Lista pacientesIngresados; // Lista de pacientes ingresados ordenados por id ASC.
     Cola pacientesEnEspera; // Cola de prioridad de pacientes por gravedad DESC.
     cadena estado; // Estado actual del hospital, valores posibles:
-                   // "ACTIVO"; "SIN SANGRE"; "INACTIVO".
+    // "ACTIVO"; "SIN SANGRE"; "INACTIVO".
     cadena tipoHospital; // Tipo de hospital, valores posibles:
 
-                         // "PRIVADO" o "PÚBLICO".
+    // "PRIVADO" o "PÚBLICO".
 public:
 
 

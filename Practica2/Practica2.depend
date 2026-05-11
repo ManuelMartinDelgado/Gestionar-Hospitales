@@ -60,3 +60,38 @@
 	<Cola.h>
 	<Hospital.h>
 
+1778257198 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\main.cpp
+	<iostream>
+	<Hospital.h>
+	"MonitorizacionHospitales.h"
+
+1778257332 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\hospital.h
+	<Lista.h>
+	<Cola.h>
+
+1778068398 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\lista.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+
+1778067436 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\cola.h
+	<iostream>
+	<Lista.h>
+
+1778070238 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\monitorizacionhospitales.h
+	<Cola.h>
+	<Hospital.h>
+
+1778067470 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\cola.cpp
+	"Cola.h"
+
+1778068740 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\hospital.cpp
+	<Hospital.h>
+	<Cola.h>
+
+1778427310 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\lista.cpp
+	<Lista.h>
+
+1778070082 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\monitorizacionhospitales.cpp
+	"MonitorizacionHospitales.h"
+

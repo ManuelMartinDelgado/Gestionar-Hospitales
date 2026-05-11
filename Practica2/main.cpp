@@ -34,7 +34,7 @@ int n_pacientes = 20;
 ////////////////
 // HOSPITALES //
 ////////////////
-void crearHospitales(MonitorizacionHospitales &sistema)
+/*void crearHospitales(MonitorizacionHospitales &sistema)
 {
     // Hospitales definidos
     sistema.crearHospital((char*)"Hospital Juan Ramón Jiménez", 1, 10, 21005, (char*)"PUBLICO");
@@ -90,7 +90,7 @@ void crearPacientes(MonitorizacionHospitales &sistema)
 
         cout << "\n[GEN] Generación de datos completada.\n";
     }
-
+*/
 int main()
 {
     cadena nombreHospital, tipoHospital;

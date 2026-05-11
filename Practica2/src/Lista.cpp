@@ -55,10 +55,14 @@ void Lista::modificar(int i, Paciente e)
 {
     elementos[i-1]=e;
 }
+
+
 Paciente Lista::observar(int i)
 {
     return(elementos[i-1]);
 }
+
+
 bool Lista::esvacia()
 {
     return (n == 0);
@@ -92,10 +96,14 @@ int Lista::posicion(Paciente e)
         i++;
     return (i == n ? -1 : i+1);
 }
+
+
 int Lista::longitud()
 {
     return n;
 }
+
+
 Lista::Lista(Paciente e)
 {
     elementos=new Paciente[INCREMENTO];
@@ -110,36 +118,50 @@ Lista::Lista(Paciente e)
         Tama=n=-1;
     }
 }
+
 void Lista::anadirIzq(Paciente e)
 {
     insertar(1, e);
 }
+
 void Lista::anadirDch(Paciente e)
 {
     insertar(n+1, e);
 }
+
+
 void Lista::eliminarIzq()
 {
     eliminar(1);
 }
+
+
 void Lista::eliminarDch()
 {
     eliminar(n);
 }
+
+
 Paciente Lista::observarIzq()
 {
     return(observar(1));
 }
+
+
 Paciente Lista::observarDch()
 {
     return(observar(n));
 }
+
+
 void Lista::concatenar(Lista l)
 {
     int lon = l.longitud();
     for (int i=1; i<=lon; i++)
         insertar(n+1, l.observar(i));
 }
+
+
 bool Lista::pertenece(Paciente e)
 {
     return (posicion(e) != -1);
