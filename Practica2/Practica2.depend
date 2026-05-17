@@ -25,23 +25,23 @@
 	<Lista.h>
 	<Cola.h>
 
-1778070082 source:g:\practica2\main.cpp
+1778671808 source:g:\practica2\main.cpp
 	<iostream>
 	<Hospital.h>
 	"MonitorizacionHospitales.h"
 
-1778067470 source:g:\practica2\src\cola.cpp
+1778671490 source:g:\practica2\src\cola.cpp
 	"Cola.h"
 
-1778067436 g:\practica2\include\cola.h
+1778671490 g:\practica2\include\cola.h
 	<iostream>
 	<Lista.h>
 
-1778068740 source:g:\practica2\src\hospital.cpp
+1778671788 source:g:\practica2\src\hospital.cpp
 	<Hospital.h>
 	<Cola.h>
 
-1778068518 g:\practica2\include\hospital.h
+1778671490 g:\practica2\include\hospital.h
 	<Lista.h>
 	<Cola.h>
 
@@ -50,7 +50,7 @@
 	<cstdlib>
 	<cstring>
 
-1778066934 source:g:\practica2\src\lista.cpp
+1778671490 source:g:\practica2\src\lista.cpp
 	<Lista.h>
 
 1778070082 source:g:\practica2\src\monitorizacionhospitales.cpp
@@ -60,12 +60,12 @@
 	<Cola.h>
 	<Hospital.h>
 
-1778257198 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\main.cpp
+1778671808 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\main.cpp
 	<iostream>
 	<Hospital.h>
 	"MonitorizacionHospitales.h"
 
-1778257332 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\hospital.h
+1778671490 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\hospital.h
 	<Lista.h>
 	<Cola.h>
 
@@ -74,7 +74,7 @@
 	<cstdlib>
 	<cstring>
 
-1778067436 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\cola.h
+1778671490 c:\users\bylucky\documents\gestionar-hospitales\practica2\include\cola.h
 	<iostream>
 	<Lista.h>
 
@@ -82,14 +82,14 @@
 	<Cola.h>
 	<Hospital.h>
 
-1778067470 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\cola.cpp
+1778671490 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\cola.cpp
 	"Cola.h"
 
-1778068740 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\hospital.cpp
+1778674736 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\hospital.cpp
 	<Hospital.h>
 	<Cola.h>
 
-1778427310 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\lista.cpp
+1778671490 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\lista.cpp
 	<Lista.h>
 
 1778070082 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\monitorizacionhospitales.cpp

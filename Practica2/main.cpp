@@ -89,8 +89,8 @@ void crearPacientes(MonitorizacionHospitales &sistema)
         crearPacientes(sistema);
 
         cout << "\n[GEN] Generación de datos completada.\n";
-    }
-*/
+    }*/
+
 int main()
 {
     cadena nombreHospital, tipoHospital;
