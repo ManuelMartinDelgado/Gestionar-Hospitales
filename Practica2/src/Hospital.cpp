@@ -10,6 +10,7 @@ Hospital::Hospital(cadena nom, int id, int mC, int cP, cadena tH)
     codigoPostal=cP;
     strcpy(tipoHospital, tH);
     strcpy (estado, "INACTIVO");
+    siguienteHospital = NULL;
 }
 
 void Hospital::getNombreHospital(cadena &nH)
@@ -39,11 +40,15 @@ int Hospital::getNumPacientesEnEspera()
     return pacientesEnEspera.longitud();
 }
 
-//HACER-------------------
-Hospital* getSiguienteHospital();
+Hospital* Hospital::getSiguienteHospital()
+{
+    return siguienteHospital;
+}
 
-//HACER-------------------
-void setSiguienteHospital(Hospital *pH);
+void Hospital::setSiguienteHospital(Hospital *pH)
+{
+    siguienteHospital=pH;
+}
 
 
 
@@ -51,7 +56,7 @@ bool Hospital::setMaxCamas(int camas)
 {
     bool cambiado = false;
 
-    if ((strcmp(estado, "INACTIVO")!= 0)&& camas < 5)
+    if ((strcmp(estado, "INACTIVO")!= 0)|| camas < 5)
     {
         cout<<"el hospital debe estar inactivo" << endl;
     }
@@ -67,26 +72,102 @@ bool Hospital::setMaxCamas(int camas)
 
     return cambiado;
 }
-//HACER-------------------
-    bool buscarPaciente(int idPaciente);
 
-//HACER-------------------
-    bool ingresarPaciente(Paciente p);
 
-//HACER-------------------
-    bool bajaPaciente(int idPaciente)
+bool Hospital::buscarPaciente(int idPaciente)
+{
+
+    bool encontrado=false;
+    int long_lista=pacientesIngresados.longitud();
+    int i=1;
+
+    if(pacientesIngresados.esvacia())
     {
-        bool eliminado = false;
+        cout<< "La lista de pacientes esta vacia" << endl;
+    }
+    else
+    {
 
+        while (i<=long_lista && !encontrado )
+        {
+            Paciente pac_temporal = pacientesIngresados.observar(i);
+            if (pac_temporal.historialClinico == idPaciente)
+            {
+                encontrado=true;
+            }
+            else
+            {
+                i++;
+            }
+        }
+    }
 
+    if (!encontrado)
+    {
+        if (pacientesEnEspera.esvacia())
+        {
+            cout<< "La cola esta vacia" << endl;
+        }
+        else
+        {
+            int long_cola = pacientesEnEspera.longitud();
+            for (int j = 0 ; j< long_cola; j++)
+            {
+                Paciente pac_tem=pacientesEnEspera.primero();
+                pacientesEnEspera.desencolar();
+
+                if (pac_tem.historialClinico == idPaciente)
+                {
+                    encontrado = true;
+                }
+                pacientesEnEspera.encolar(pac_tem);
+            }
+        }
+    }
+
+    return encontrado;
+}
+
+//HACER-------------------
+bool Hospital::ingresarPaciente(Paciente p)
+{
+    bool ingresado = false;
+    if (strcmp (estado, "ACTIVO")!= 0)
+    {
+        cout << "Solo se puede ingresar pacientes en hospitales Activos"<< endl;
+    }
+
+    else
+    {
 
     }
 
-//HACER-------------------
-    void exportarPacientesIngresados(Paciente *ingresados);
+}
 
 //HACER-------------------
-    void exportarPacientesEnEspera(Paciente *enEspera);
+bool Hospital::bajaPaciente(int idPaciente)
+{
+    bool eliminado = false;
+
+    Paciente pac;
+
+
+
+
+
+}
+
+//HACER-------------------
+void Hospital::exportarPacientesIngresados(Paciente *ingresados)
+{
+
+}
+
+//HACER-------------------
+void Hospital::exportarPacientesEnEspera(Paciente *enEspera)
+{
+
+}
 
 
 bool Hospital::estaActivo()
@@ -151,7 +232,7 @@ bool Hospital::desactivar()
         int long_cola=pacientesEnEspera.longitud();
         if(!pacientesIngresados.esvacia())
         {
-            for (int i=1; i<=long_lista; i++)
+            for (int i=1; i<long_lista; i++)
             {
                 pacientesIngresados.eliminarIzq();
             }
@@ -159,7 +240,7 @@ bool Hospital::desactivar()
 
         if (!pacientesEnEspera.esvacia())
         {
-            for(int i = 0; i <= long_cola; i++)
+            while(!pacientesEnEspera.esvacia())
             {
                 pacientesEnEspera.desencolar();
             }
@@ -173,7 +254,7 @@ bool Hospital::faltaSangre()
 {
     bool cambiado = false;
 
-    if (strcmp(estado , "ACTIVO")== 0)
+    if (strcmp(estado, "ACTIVO")== 0)
     {
         strcpy(estado,"SIN SANGRE");
 
@@ -198,7 +279,7 @@ bool Hospital::faltaSangre()
 void Hospital::mostrarPacientesIngresados()
 {
     Paciente pac;
-    for (int i = 1; i<pacientesIngresados.longitud(); i++)
+    for (int i = 0; i<pacientesIngresados.longitud(); i++)
     {
         pac=pacientesIngresados.observar(i+1);
         cout<<"Nombre del paciente: "<< " "<< pac.nombreCompleto<< endl;
@@ -213,21 +294,21 @@ void Hospital::mostrarPacientesIngresados()
 void Hospital::mostrarPacientesEnEspera()
 {
     Paciente pac;
-	int lon = pacientesEnEspera.longitud();
+    int lon = pacientesEnEspera.longitud();
 
     for (int i=0 ; i< lon; i++)
     {
         Paciente temporal = pacientesEnEspera.primero();
         pacientesEnEspera.desencolar();
 
-        if (temporal.nombreCompleto == pac.nombreCompleto)
-        {
-        cout<<"Nombre del paciente: "<< " "<< pac.nombreCompleto<< endl;
-        cout<<"Historial clínico: "<< " "<< pac.historialClinico<< endl;
-        cout<<"Tipo de sangre: "<< " "<< pac.tipoSangre<< endl;
-        cout<<"Gravedad: "<< " " << pac.gravedad<< endl;
-        cout<<"Patologia: "<< " "<< pac.patologia<< endl;
-        }
+
+
+        cout<<"Nombre del paciente: "<< " "<< temporal.nombreCompleto<< endl;
+        cout<<"Historial clínico: "<< " "<< temporal.historialClinico<< endl;
+        cout<<"Tipo de sangre: "<< " "<< temporal.tipoSangre<< endl;
+        cout<<"Gravedad: "<< " " << temporal.gravedad<< endl;
+        cout<<"Patologia: "<< " "<< temporal.patologia<< endl;
+
     }
 }
 

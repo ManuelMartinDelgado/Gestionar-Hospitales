@@ -95,3 +95,38 @@
 1778070082 source:c:\users\bylucky\documents\gestionar-hospitales\practica2\src\monitorizacionhospitales.cpp
 	"MonitorizacionHospitales.h"
 
+1779119095 source:c:\users\splin\documents\gestionar-hospitales\practica2\main.cpp
+	<iostream>
+	<Hospital.h>
+	"MonitorizacionHospitales.h"
+
+1779119095 c:\users\splin\documents\gestionar-hospitales\practica2\include\hospital.h
+	<Lista.h>
+	<Cola.h>
+
+1779119095 c:\users\splin\documents\gestionar-hospitales\practica2\include\lista.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+
+1779119095 c:\users\splin\documents\gestionar-hospitales\practica2\include\cola.h
+	<iostream>
+	<Lista.h>
+
+1779119095 c:\users\splin\documents\gestionar-hospitales\practica2\include\monitorizacionhospitales.h
+	<Cola.h>
+	<Hospital.h>
+
+1779119095 source:c:\users\splin\documents\gestionar-hospitales\practica2\src\cola.cpp
+	"Cola.h"
+
+1779119095 source:c:\users\splin\documents\gestionar-hospitales\practica2\src\hospital.cpp
+	<Hospital.h>
+	<Cola.h>
+
+1779119095 source:c:\users\splin\documents\gestionar-hospitales\practica2\src\lista.cpp
+	<Lista.h>
+
+1779119095 source:c:\users\splin\documents\gestionar-hospitales\practica2\src\monitorizacionhospitales.cpp
+	"MonitorizacionHospitales.h"
+
